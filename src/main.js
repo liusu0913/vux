@@ -2,21 +2,18 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import FastClick from 'fastclick'
-import VueRouter from 'vue-router'
+// 引入路由
+import router from './router'
+import vueResource from 'vue-resource'
 import App from './App'
-import Home from './components/HelloFromVux'
 
-Vue.use(VueRouter)
+// 第一个坑alert的样式不显示
+import {AlertPlugin, ConfirmPlugin} from 'vux'
+Vue.use(AlertPlugin)
+Vue.use(ConfirmPlugin)
+Vue.use(vueResource)
 
-const routes = [{
-  path: '/',
-  component: Home
-}]
-
-const router = new VueRouter({
-  routes
-})
-
+// 引入全局firstClick
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
@@ -24,5 +21,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   router,
-  render: h => h(App)
-}).$mount('#app-box')
+  template: '<App/>',
+  components: {App}
+}).$mount('#app-box');
+// $mount('ID')就先刚玉对象当中的el属性
