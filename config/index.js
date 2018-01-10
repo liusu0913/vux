@@ -5,9 +5,10 @@
 const path = require('path')
 
 module.exports = {
+    // 开发环境打包配置
   dev: {
 
-    // Paths
+    // Path 开发环境配置
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
@@ -48,14 +49,17 @@ module.exports = {
     cssSourceMap: false,
   },
 
+
+
+    // 生产环境打包配置
   build: {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
-    // Paths
+    // Paths 打包环境的路径的配置
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',// 配置在当前目录下寻找
 
     /**
      * Source Maps
