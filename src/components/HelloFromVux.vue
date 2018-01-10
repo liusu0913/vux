@@ -12,7 +12,11 @@
     <loading v-model="isLoading"></loading>
     <!--  native可以让根组件监听原生的事件 -->
     <x-button type="primary" @click.native="clickMe">显示/隐藏</x-button>
-    <router-link to="/form">form的Demo链接</router-link>
+    <router-link to="/form1">form1的Demo链接</router-link><br>
+    <router-link to="/form2">form2的Demo链接</router-link><br>
+    <router-link to="/form3">form3的Demo链接</router-link><br>
+    <router-link to="/form4">form4的Demo链接</router-link><br>
+    <router-link to="/form5">form5的Demo链接</router-link>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
  <div>
-  <x-header>乘机人信息</x-header>
+  <x-header>乘机人信息2</x-header>
   <!-- 输入框的样式 -->
   <group>
    <x-input title="联系人：" v-model="username" placeholder="请输入联系人姓名" text-align="right"></x-input>
