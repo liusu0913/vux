@@ -70,5 +70,9 @@ let webpackConfig = {
 
 
 module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: ['vux-ui', 'progress-bar', 'duplicate-style']
+  // 控制Vux的部分；最后一个参数是控制vux的主题颜色
+  plugins: ['vux-ui', 'progress-bar', 'duplicate-style', {
+    name: 'less-theme',
+    path: 'src/style/theme.less'
+  }]
 })

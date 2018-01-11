@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Promise</title>
+</head>
+<body>
+	<script>
+		new Promise(function(resolve,reject) {
+			setTimeout(function(){
+				resolve('1111111');
+			}, 1000)
+		}).then(function(data) {
+			console.log(1111);
+			console.log(data);
+		})
+	</script>
+</body>
+</html>
